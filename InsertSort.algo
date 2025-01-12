@@ -1,0 +1,39 @@
+ ALGORITHM Insert_Sort
+
+ VAR
+    n,i,k,j,t,key: INTEGER;
+    Arr: ARRAY_OF INTEGER [20];
+
+ BEGIN
+
+ Write("Donnez le nombre d'éléments dans le tableau");
+ Read(n); 
+                                                        // Notre tableau contient 5 éléments donc n=5
+ Write("Donnez la valeur des éléments du tableau")               
+
+ FOR k FROM 0 TO n-1 DO
+    Read(Arr[i])
+                               // Arr=[4,7,2,5,6]
+ END_FOR
+
+ FOR i FROM 1 TO n-1 DO
+     key:=Arr[i];   //Pour la première boucle, key=7
+     j:=i-1;     // j=0
+
+     WHILE (j>=0 AND Arr[j]>key) DO    // L'une des deux conditions n'est valide lors de cette boucle
+          Arr[j+1]:=Arr[j];          
+          j:=j-1;        
+
+     END_WHILE
+          Arr[j+1]:= key;
+
+ END_FOR    
+
+ Write ("Le tableau après le tri par insertion est:")
+    FOR t FROM 0 TO Arr.length-1 DO
+
+       Write (Arr[t]);
+
+    END_FOR
+
+ END
